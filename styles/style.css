@@ -1,0 +1,31 @@
+h1 {
+    color:gold;
+    width: device-width;
+    font-size: 60px;
+    text-align: center;
+}
+
+li {
+    width: device-width;
+    padding: 10px;
+    border: 2px solid rgb(220, 241, 28);
+}
+
+a,p {
+    color: rgb(43, 240, 102);
+}
+
+body {
+    width: device-width;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+.image-container {
+    background-color: rgb(29,61,86);
+    padding: 10px;
+}
