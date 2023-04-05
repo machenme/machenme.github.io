@@ -1,26 +1,37 @@
 
 h1 {
-    color:gold;
+    color:rgb(55, 178, 235);
     width: device-width;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
 }
-
-li {
-    width: device-width;
-    padding: 10px;
-    border: 2px solid rgb(28, 241, 92);
-    margin:5px;
+.double{
+    display: flex;
 }
-
-a,p {
-    color: rgb(13, 20, 20);
+.python_url,p,a {
+    width: 30%;
+    padding: 10px;
+    margin:5px;
+    font-size: 18px;
+}
+.git_about{
+    width: 70%;
+    padding: 10px;
+    margin:20px;
+    height: 630px;
+    overflow: auto;
+    font-size: 18px;
+}
+.double{
+    display: flex;
+    background-color: rgb(255,255,255,0.82);
+    border-radius: 20px;
+    
 }
 
 body {
-    width: device-width;
-    margin: 0 auto;
-    padding: 0px 20px 20px 20px;
+    background-image: url("../images/1.jpg"); /* 替换为您的背景图片路径 */
+    background-size: cover;
 }
 
 img {
