@@ -7,6 +7,10 @@
   <!--头部信息都放在<head>内,这些内容都是给浏览器看的,并不给用户看-->
   <meta charset="utf-8">
   <!--编码格式-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="machenme">
+  <title>Document</title>
   <meta name='description' content='This is a website description for search engine!'>
   <title>个人常用资料汇总</title>
   <!--网页标题-->
@@ -18,13 +22,15 @@
   <!--主体内容都放在<body>内-->
   <h1>个人常用资料合集</h1>
   <!--标题,根据字体大小分别可以是h1,h2,h3,h4,h5,h6-->
-  <p></p>
+  <p>python 使用北外源
+  <pre>pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple</pre>
+  </p>
   <!--段落(paragraph缩写)-->
   <div class="double">
     <div class="python_url">
+      <h2>Python常用库</h2>
       <ul>
-        <h4>Python常用库</h4>
-        <li><a href="https://keras.io/zh/">Keras 中文文档</a></li>
+        <li><a href="https://keras.io/">Keras</a></li>
         <li><a href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html">matplotlib.pyplot(plt)</a></li>
         <li><a href="https://www.tensorflow.org/api_docs/python/tf">TensorFlow</a></li>
         <li><a href="https://scikit-learn.org/stable/modules/classes.html">scikit-learn(sklearn)</a></li>
@@ -34,196 +40,19 @@
         <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/">BeautifulSoup(bs4)</a></li>
         <li><a href="https://numpy.org/doc/stable/index.html">Numpy</a></li>
         <li><a href="https://pgmpy.org/">pgmpy</a></li>
-        <h4>其他相关</h4>
+      </ul>
+      <h2>其他相关</h2>
+      <ul>
+        <li><a href="page/git.html" title="git常用指令">Git常用指令</a></li>
         <li><a href="https://www.bilibili.com/video/BV1Sw411Z779/">Python基础教程</a></li>
         <li><a href="https://www.bilibili.com/video/BV12E411A7ZQ">BS4爬虫视频教程</a></li>
         <li><a href="https://stackoverflow.com">stackoverflow</a></li>
         <li><a href="https://learnxinyminutes.com/docs/zh-cn/python-cn/">Y分钟速成Python</a></li>
-        <li><a href="https://mirrors.bfsu.edu.cn/help/anaconda/"></a>Conda环境配置</li>
-        <li><a href=""></a></li>
+        <li><a href="https://mirrors.bfsu.edu.cn/help/anaconda/">Conda环境配置</a></li>
+        <li><a href="https://mirrors.bfsu.edu.cn/help/anaconda/"></a></li>
       </ul>
     </div>
     <div class="git_about">
-      <h4>Git 基础指令</h4>
-      <ul>
-        <li><code>git clone &lt;url&gt; [&lt;dir_name&gt;]</code>
-          <ul>
-            <li>可以将远程仓库克隆到本地,<code>url</code> 可以是<code>ssh</code> 或者<code>https</code> 协议.</li>
-            <li>如果有<code>dir_name</code> 则会将项目目录重命名为<code>dir_name</code> .</li>
-          </ul>
-        </li>
-        <li><code>git init</code>
-          <ul>
-            <li>将某个目录初始化为Git仓库,这样这个目录就可以被Git管理了.</li>
-          </ul>
-        </li>
-        <li><code>git add &lt;file_name&gt;</code>
-          <ul>
-            <li>添加文件到Git,可以将文件添加到Git仓库中,此时文件会变为已暂存并且处于跟踪状态.</li>
-            <li><code>git add .</code> 会将该目录下所有文件都会被添加到Git仓库中,</li>
-          </ul>
-          但是不包括被<code>.gitignore</code> 忽略的文件.<ul>
-            <li>在每次修改文件并保存后,文件都会变成<code>modified</code> (已修改)状态,</li>
-          </ul>
-          需要重新<code>git add &lt;filename&gt;</code> 将其添加到暂存区.
-        </li>
-        <li><code>git status</code>
-          <ul>
-            <li>检查当前文件状态,已跟踪,未跟踪,已修改,已暂存,未暂存等等.</li>
-            <li>
-              <code>git status -s</code> 会简洁的显示文件状态.新添加的未跟踪文件前面有<code>??</code> 标记，新添加到暂存区中的文件前面有<code>A</code>
-              标记，修改过的文件前面有<code>M</code> 标记.
-            </li>
-          </ul>
-        </li>
-        <li><code>git rm &lt;file_name&gt;</code>
-          <ul>
-            <li>将文件从Git仓库中移除,并且会将其从暂存区中移除.</li>
-            <li><code>git rm --cached file_name</code> 将文件从追踪状态移除(移出Git仓库),并不会删除文件本身.</li>
-            <li><code>git rm \*~</code> 可以移除所有以波浪符结尾的文件.如果不小心将文件移除,可以使用</li>
-          </ul>
-        </li>
-        <li><code>git checkout -- &lt;file_name&gt;</code>
-          <ul>
-            <li>将文件恢复到最新版本.</li>
-          </ul>
-        </li>
-        <li><code>git mv &lt;file_from&gt; &lt;file_to&gt;</code>
-          <ul>
-            <li>可以将文件从file_from移动到file_to,并且会将其从暂存区中移除,也可以使用这种方式对文件进行重命名而不用重新跟踪新的文件.</li>
-          </ul>
-        </li>
-        <li><code>git log</code>
-          <ul>
-            <li>在不传入任何参数的默认情况下会按时间先后顺序列出所有的提交,最近的更新排在最上面.正如你所看到的,这个命令会列出每个提交的SHA-1校验、作者的名字和电子邮件地址、提交时间以及提交说明.</li>
-            <li><code>git log -p -2</code> 可以查看最近两次提交的内容差异</li>
-            <li><code>git log --stat</code> 可以查看每次提交的简略统计信息</li>
-            <li><code>git log --pretty=oneline</code> 可以查看每次提交的简略信息</li>
-            <li><code>git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</code> 可以查看每次提交的详细信息</li>
-            <li><code>git log --pretty=format:&quot;%h - %an, %ar : %s&quot; --graph</code> 可以查看每次提交的详细信息并且以图形的方式展示
-            </li>
-          </ul>
-        </li>
-        <li><code>git commit -m &quot;commit message&quot;</code>
-          <ul>
-            <li>将所有的修改提交到本地仓库,并且需要添加提交说明.</li>
-          </ul>
-        </li>
-        <li><code>git commit -a -m &quot;commit message&quot;</code>
-          <ul>
-            <li>将所有已跟踪的文件提交到本地仓库,并且需要添加提交说明.</li>
-          </ul>
-        </li>
-        <li><code>git commit --amend</code>
-          <ul>
-            <li>重新生成一次提交,但是会将上一次提交的内容覆盖掉,这个命令可以用来修改上一次提交的说明,或者将多次提交合并为一次提交.</li>
-          </ul>
-        </li>
-        <li><code>git reset HEAD file_name</code>
-          <ul>
-            <li>可以取消暂存文件(<code>慎用</code> ).</li>
-          </ul>
-        </li>
-        <li><code>git checkout -- file_name</code>
-          <ul>
-            <li>撤销文件修改(<code>慎用</code> ).</li>
-            <li>请务必记得 git checkout -- <file> 是一个危险的命令. 你对那个文件在本地的任何修改都会消失——Git会用最近提交的版本覆盖掉它. 除非你确实清楚不想要对那个文件的本地修改了,
-                否则请不要使用这个命令.</li>
-          </ul>
-        </li>
-        <li><code>.gitignore</code>
-          <ul>
-            <li>用来告诉Git哪些文件不需要添加到版本管理中,可以使用通配符.<a href="https://github.com/github/gitignore">详细信息</a></li>
-          </ul>
-        </li>
-        <li><code>git diff</code>
-          <ul>
-            <li>查看当前哪些修改尚未暂存,哪些更新已经暂存并且准备好提交.(查看完以后输入<code>q</code> 退出)</li>
-          </ul>
-        </li>
-      </ul>
-      <h4>远程仓库</h4>
-      <ul>
-        <li><code>git remote</code>
-          <ul>
-            <li>查看远程仓库的信息. 如果已经克隆了自己的仓库, 默认的远程仓库名字是origin.</li>
-            <li><code>git remote -v</code> 可以查看远程仓库的详细信息.</li>
-          </ul>
-        </li>
-        <li><code>git remote add &lt;shortname&gt; &lt;url&gt;</code>
-          <ul>
-            <li>添加一个新的远程Git仓库,并且指定一个方便记忆的简写.</li>
-          </ul>
-        </li>
-        <li><code>git fetch &lt;remote&gt;</code>
-          <ul>
-            <li>从远程仓库中获取代码,但是不会自动合并到本地仓库中.</li>
-          </ul>
-        </li>
-        <li><code>git push &lt;remote&gt; &lt;branch&gt;</code>
-          <ul>
-            <li>将本地仓库的代码推送到远程仓库中.</li>
-          </ul>
-        </li>
-        <li><code>git remote rename &lt;old_remote_name&gt; &lt;new_remote_name&gt;</code>
-          <ul>
-            <li>重命名远程仓库的名字.</li>
-          </ul>
-        </li>
-        <li><code>git remote remove &lt;remote_name&gt;</code>
-          <ul>
-            <li>删除远程仓库.</li>
-          </ul>
-        </li>
-      </ul>
-      <h4>标签</h4>
-      <ul>
-        <li><code>git tag [-l]</code>
-          <ul>
-            <li>查看所有标签.</li>
-            <li><code>git tag -l &quot;v1.8.5*&quot;</code> 可以查看所有以v1.8.5开头的标签.</li>
-          </ul>
-        </li>
-        <li><code>git tag -a &lt;tag_name&gt; -m &quot;tag message&quot;</code>
-          <ul>
-            <li>创建一个带有说明的标签.</li>
-          </ul>
-        </li>
-        <li><code>git show</code>
-          <ul>
-            <li>查看标签的详细信息.</li>
-          </ul>
-        </li>
-        <li><code>git tag &lt;tag_name&gt; &lt;commit_id&gt;</code>
-          <ul>
-            <li>给某个提交打标签(不带说明).</li>
-          </ul>
-        </li>
-        <li><code>git tag -d &lt;tag_name&gt;</code>
-          <ul>
-            <li>删除标签.</li>
-          </ul>
-        </li>
-        <li><code>git push origin &lt;tag_name&gt;</code>
-          <ul>
-            <li>将标签推送到远程仓库中.</li>
-          </ul>
-        </li>
-      </ul>
-      <h4>Git 别名</h4>
-      <ul>
-        <li>可以使用<code>alias.&lt;command_name&gt;</code> 来设置别名.</li>
-        <li><code>git config --global alias.last 'log -1 HEAD'</code>
-          <ul>
-            <li><code>git last</code> 可以查看最近一次提交的信息.</li>
-          </ul>
-        </li>
-        <li><code>git config --global alias.unstage 'reset HEAD --'</code>
-          <ul>
-            <li><code>git unstage &lt;file&gt;</code> 可以取消暂存文件.</li>
-          </ul>
-        </li>
-      </ul>
     </div>
   </div>
   <button>切换用户</button>

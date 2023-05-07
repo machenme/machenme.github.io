@@ -18,7 +18,7 @@ h1 {
     width: 70%;
     padding: 10px;
     margin:20px;
-    height: 630px;
+    height: 620px;
     overflow: auto;
     font-size: 18px;
 }
@@ -27,18 +27,4 @@ h1 {
     background-color: rgb(255,255,255,0.82);
     border-radius: 20px;
     
-}
-
-body {
-    background-image: url("../images/1.jpg"); /* 替换为您的背景图片路径 */
-    background-size: cover;
-}
-
-img {
-    display: block;
-    margin: 0 auto;
-}
-.image-container {
-    background-color: rgb(29,61,86);
-    padding: 10px;
 }
