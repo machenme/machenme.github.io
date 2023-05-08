@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTML网页第一句一般都是<!DOCTYPE html>用来告诉浏览器这是个html网页 -->
-<html>
+<html lang="zh-cn">
 <!--网页的所有元素都放在<html>内-->
 
 <head>
@@ -18,44 +18,47 @@
   <!--引入css文件,rel是relationship的缩写,告诉html二者是什么关系-->
 </head>
 
-<body>
+<body background="images/background.jpg">
   <!--主体内容都放在<body>内-->
   <h1>个人常用资料合集</h1>
-  <!--标题,根据字体大小分别可以是h1,h2,h3,h4,h5,h6-->
-  <p>python 使用北外源
-  <pre>pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple</pre>
-  </p>
+  <div class="search_box">
+    <img class="search-icon" src="https://files.codelife.cc/itab/search/google.svg" title="google logo">
+    <input id="search_value" class="search_value" placeholder="输入搜索内容" type="text">
+
+    <svg class="search-big-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+      <path
+        d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z" />
+    </svg>
+  </div>
+
   <!--段落(paragraph缩写)-->
-  <div class="double">
-    <div class="python_url">
-      <h2>Python常用库</h2>
-      <ul>
-        <li><a href="https://keras.io/">Keras</a></li>
-        <li><a href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html">matplotlib.pyplot(plt)</a></li>
-        <li><a href="https://www.tensorflow.org/api_docs/python/tf">TensorFlow</a></li>
-        <li><a href="https://scikit-learn.org/stable/modules/classes.html">scikit-learn(sklearn)</a></li>
-        <li><a href="https://regex101.com/">正则表达式测试</a></li>
-        <li><a href="https://pandas.pydata.org/docs/">Pandas</a></li>
-        <li><a href="https://docs.scipy.org/doc/scipy/index.html">Scipy</a></li>
-        <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/">BeautifulSoup(bs4)</a></li>
-        <li><a href="https://numpy.org/doc/stable/index.html">Numpy</a></li>
-        <li><a href="https://pgmpy.org/">pgmpy</a></li>
-      </ul>
-      <h2>其他相关</h2>
-      <ul>
-        <li><a href="page/git.html" title="git常用指令">Git常用指令</a></li>
-        <li><a href="https://www.bilibili.com/video/BV1Sw411Z779/">Python基础教程</a></li>
-        <li><a href="https://www.bilibili.com/video/BV12E411A7ZQ">BS4爬虫视频教程</a></li>
-        <li><a href="https://stackoverflow.com">stackoverflow</a></li>
-        <li><a href="https://learnxinyminutes.com/docs/zh-cn/python-cn/">Y分钟速成Python</a></li>
-        <li><a href="https://mirrors.bfsu.edu.cn/help/anaconda/">Conda环境配置</a></li>
-        <li><a href="https://mirrors.bfsu.edu.cn/help/anaconda/"></a></li>
-      </ul>
+  <div class="main_hstack">
+    <div class="python_lib">
+      <h3>Python常用库</h3>
+      <p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/">BeautifulSoup(bs4)</a></p>
+      <p><a href="https://keras.io/">Keras</a>
+      <p><a href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html">matplotlib.pyplot(plt)</a></p>
+      <p><a href="https://numpy.org/doc/stable/index.html">Numpy</a></p>
+      <p><a href="https://pandas.pydata.org/docs/">Pandas</a></p>
+      <p><a href="https://pgmpy.org/">pgmpy</a></p>
+      <p><a href="https://regex101.com/">regex101(正则表达式)</a></p>
+      <p><a href="https://scikit-learn.org/stable/modules/classes.html">scikit-learn(sklearn)</a></p>
+      <p><a href="https://docs.scipy.org/doc/scipy/index.html">scipy</a></p>
+      <p><a href="https://www.tensorflow.org/api_docs/python/tf">TensorFlow</a></p>
+
     </div>
-    <div class="git_about">
+    <div class="tutorial">
+      <h3>常见教程</h3>
+      <p><a href="https://mirrors.bfsu.edu.cn/help/anaconda/">Conda环境配置</a></p>
+      <p><a href="page/git.html" title="git常用指令">Git常用指令</a></p>
+      <p><a href="https://www.bilibili.com/video/BV1Sw411Z779/">Python基础教程</a></p>
+      <p><a href="https://www.bilibili.com/video/BV12E411A7ZQ">BS4爬虫视频教程</a></p>
+      <p><a href="https://stackoverflow.com">stackoverflow</a></p>
+      <p><a href="https://learnxinyminutes.com/docs/zh-cn/python-cn/">Y分钟速成Python</a></p>
+
     </div>
   </div>
-  <button>切换用户</button>
+  <div class="background"></div>
   <script src="scripts/main.js" defer></script>
 </body>
 

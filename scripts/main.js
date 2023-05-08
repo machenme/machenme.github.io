@@ -1,23 +1,18 @@
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
-
-function setUserName() {
-    let myName = prompt('请输入你的名字');
-    if (!myName) {
-        setUserName();
-    } else {
-        localStorage.setItem('name', myName);
-        myHeading.textContent = 'Python 酷毙了，' + myName;
+const input = document.querySelector('input');
+const searchIt = document.getElementsByClassName('search-big-icon')[0];
+function google() {
+    let search_value = document.getElementById('search_value').value;
+    if (search_value) {
+        let temp = "https://www.google.com.hk/search?q=" + search_value
+        window.location.href = temp
     }
 }
 
-// if (!localStorage.getItem("name")) {
-//     setUserName();
-// } else {
-//     let storedName = localStorage.getItem('name');
-//     myHeading.textContent = 'Mozilla 酷毙了，' + storedName;
-// }
-
-myButton.onclick = function () {
-    setUserName();
+searchIt.onclick = function () {
+    google();
 }
+input.addEventListener('keydown', function (event) {
+    if (event.key == 'Enter') {
+        google()
+    }
+})
