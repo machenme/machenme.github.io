@@ -1,0 +1,156 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 使body占满视口的高度 */
+}
+
+/* 头部样式 */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #010201;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 为所有的 <pre> 元素添加样式 */
+pre {
+    background-color: #f5f5f5;
+    /* 设置底色 */
+    border: 1px solid #ccc;
+    /* 添加边框 */
+    padding: 10px;
+    /* 添加内边距 */
+    border-radius: 5px;
+    /* 添加圆角 */
+    overflow-x: auto;
+    /* 横向滚动条 */
+    white-space: pre-wrap;
+    /* 空白处自动换行 */
+}
+
+
+/* 使用 Flexbox 布局将 .conda-config-wrapper 分为左右两部分 */
+.conda-config-wrapper {
+    display: flex;
+    flex-direction: row; /* 横向排列 */
+}
+
+/* 左边部分占据固定的宽度 */
+.conda-config {
+    flex: 0 0 50%; /* 占据 50% 的宽度 */
+}
+
+/* 右边部分占据 50% 的宽度 */
+.conda-config1 {
+    flex: 0 0 50%; /* 占据 50% 的宽度 */
+}
+
+
+
+
+header h1 {
+    margin: 0;
+}
+
+/* 介绍部分样式 */
+.intro {
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+/* 各部分样式 */
+section {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+code {
+    background: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* 列表样式 */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* 页脚样式 */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    /* 添加上边距，确保footer在内容之后 */
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item a {
+    display: block;
+    font-size: 1.1em;
+    /* 增加超链接的字体大小 */
+    color: #333;
+    /* 根据需要调整文本颜色 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.grid-item a:hover {
+    color: #555;
+    /* 悬停时文本颜色变化 */
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .grid-item a {
+        font-size: 1em;
+        /* 在小屏幕上保持适中的字体大小 */
+    }
+}

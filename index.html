@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人自用常见网站</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" defer></script>
+    <script src="clipboard-copy.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>个人自用常见网站</h1>
+        <p>从各大网站自己复制粘贴过来的</p>
+    </header>
+    <section class="intro">
+        <p>这是我从各大网站复制粘贴过来的，包括但不限于
+            <a href="https://www.python.org/" target="_blank">python</a>,
+            <a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank">清华大学镜像站</a>,
+            <a href="https://developer.nvidia.com/" target="_blank">Nvidia</a>,
+            <a href="https://pytorch.org/get-started/locally/" target="_blank">torch</a>,
+            <a href="https://www.tensorflow.org/install/pip" target="_blank">tensorflow</a>
+        </p>
+    </section>
+    <section class="links-grid">
+        <div class="grid-item">
+            <a href="https://repo.anaconda.com/miniconda/Miniconda3-py312_24.1.2-0-Windows-x86_64.exe"
+                target="_blank">Miniconda</a>
+        </div>
+        <div class="grid-item">
+            <a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user"
+                target="_blank">Vscode</a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe" target="_blank">Python3.11.8</a>
+        </div>
+        <div class="grid-item">
+            <a href="https://developer.download.nvidia.cn/compute/cuda/12.1.0/local_installers/cuda_12.1.0_531.14_windows.exe"
+                target="_blank">Cuda 12.1</a>
+        </div>
+    </section>
+    <div class="conda-config-wrapper">
+        <section class="conda-config">
+            <h3>配置 Pip 镜像源</h3>
+            <pre class="copyable">
+    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+        </pre>
+
+            <h3>配置 Conda 镜像源</h3>
+            <p>Windows用户需要手动执行</p>
+                <pre class="copyable">conda config --set show_channel_urls yes</pre>
+            <pre class="copyable">
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main
+  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r
+  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch 
+custom_channels:
+  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+        </pre>
+            <h3>
+                Windows
+            </h3>
+            <p>pytorch + cuda12.1</p>
+            <pre class="copyable">
+    pip install torch==2.2.1+cu121 torchvision torchaudio
+        </pre>
+            <p>Tensorflow</p>
+            <pre class="copyable">
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+# Anything above 2.10 is not supported on the GPU on Windows Native
+python -m pip install "tensorflow<2.11"
+# Verify the installation:
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+        </pre>
+
+        </section>
+    </div>
+
+    
+
+
+
+    <footer>
+        <p>由我自己负责运行维护。</p>
+    </footer>
+
+</body>
+
+</html>
