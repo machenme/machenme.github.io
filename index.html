@@ -45,12 +45,11 @@
         <section class="conda-config">
             <h3>配置 Pip 镜像源</h3>
             <pre class="copyable">
-    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
         </pre>
-
             <h3>配置 Conda 镜像源</h3>
             <p>Windows用户需要手动执行</p>
-                <pre class="copyable">conda config --set show_channel_urls yes</pre>
+            <pre class="copyable">conda config --set show_channel_urls yes</pre>
             <pre class="copyable">
 channels:
   - defaults
@@ -69,26 +68,25 @@ custom_channels:
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
         </pre>
-            <h3>
-                Windows
-            </h3>
             <p>pytorch + cuda12.1</p>
             <pre class="copyable">
-    pip install torch==2.2.1+cu121 torchvision torchaudio
+conda install pytorch=2.2.1 pytorch-cuda=12.1 torchvision torchaudio -c nvidia
         </pre>
-            <p>Tensorflow</p>
+            <p>Tensorflow + cuda12.1</p>
             <pre class="copyable">
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
-# Anything above 2.10 is not supported on the GPU on Windows Native
-python -m pip install "tensorflow<2.11"
 # Verify the installation:
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-        </pre>
+            </pre>
 
+            <p>Tensorflow + cpu</p>
+            <pre class="copyable">
+# Anything above 2.10 is not supported on the GPU on Windows Native
+python -m pip install "tensorflow<2.11" </pre>
         </section>
     </div>
 
-    
+
 
 
 
