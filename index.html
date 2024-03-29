@@ -46,8 +46,7 @@
         <section class="conda-config">
             <h3>配置 Pip 镜像源</h3>
             <pre class="copyable">
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-        </pre>
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</pre>
             <h3>配置 Conda 镜像源</h3>
             <p>Windows用户需要手动执行</p>
             <pre class="copyable">conda config --set show_channel_urls yes</pre>
@@ -67,8 +66,7 @@ custom_channels:
   menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
-        </pre>
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/</pre>
             <p>pytorch + cuda12.1</p>
             <pre class="copyable">
 conda install pytorch=2.2.1 pytorch-cuda=12.1 torchvision torchaudio -c nvidia
@@ -77,8 +75,7 @@ conda install pytorch=2.2.1 pytorch-cuda=12.1 torchvision torchaudio -c nvidia
             <pre class="copyable">
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 # Verify the installation:
-python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-            </pre>
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"</pre>
 
             <p>Tensorflow + cpu</p>
             <pre class="copyable">
