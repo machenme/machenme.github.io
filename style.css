@@ -73,7 +73,6 @@ h2 {
 }
 
 
-
 header h1 {
     margin: 0;
 }
@@ -165,3 +164,66 @@ footer {
         /* 在小屏幕上保持适中的字体大小 */
     }
 }
+
+/* 表格基本样式 */
+table {
+    width: 100%;
+    /* 表格宽度为100% */
+    border-collapse: collapse;
+    /* 合并单元格边框 */
+    font-family: Arial, sans-serif;
+    /* 设置字体 */
+}
+
+/* 表格标题样式 */
+th {
+    background-color: #4a4a4a;
+    /* 深灰色背景 */
+    color: white;
+    /* 白色文字 */
+    padding: 10px;
+    /* 内边距 */
+    font-weight: normal;
+    /* 字体不加粗 */
+    text-align: left;
+    /* 文本左对齐 */
+}
+
+/* 表格内容样式 */
+td {
+    border-bottom: 1px solid #ddd;
+    /* 底部边框 */
+    padding: 10px;
+    /* 内边距 */
+    color: #333;
+    /* 深灰色文字 */
+}
+
+/* 表格行hover效果 */
+tr:hover {
+    background-color: #f2f2f2;
+    /* 浅灰色背景 */
+}
+
+/* 特定行的样式 */
+tr:nth-child(even) {
+    /* 这里可以设置偶数行的样式，例如背景色 */
+    background-color: #f9f9f9;
+}
+
+.command-detail-left,
+.command-detail-right {
+    box-sizing: border-box;
+    /* 确保宽度和高度包括padding和border */
+    padding: 10px;
+    /* 添加一些内边距 */
+}
+
+
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
