@@ -12,12 +12,12 @@
 
 <body>
     <header>
-        <h1>个人自用常见网站</h1>
-        <p>从各大网站自己复制粘贴过来的</p>
+        <h1>Python自用常见网站</h1>
     </header>
     <section class="intro">
         <p>这是我从各大网站复制粘贴过来的，包括但不限于
             <a href="https://www.python.org/" target="_blank">python</a>,
+            <a href="https://docs.anaconda.com/free/miniconda/index.html" target="_blank">Miniconda</a>,
             <a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank">清华大学镜像站</a>,
             <a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank">Cuda</a>,
             <a href="https://developer.nvidia.com/rdp/cudnn-archive" target="_blank">Cudnn</a>,
@@ -25,6 +25,7 @@
             <a href="https://www.tensorflow.org/install/pip" target="_blank">tensorflow</a>
         </p>
     </section>
+    <h2>快速下载</h2>
     <section class="links-grid">
         <div class="grid-item">
             <a href="https://repo.anaconda.com/miniconda/Miniconda3-py312_24.1.2-0-Windows-x86_64.exe"
@@ -42,15 +43,16 @@
                 target="_blank">Cuda 12.1</a>
         </div>
     </section>
-    <div class="conda-config-wrapper">
-        <section class="conda-config">
-            <h3>配置 Pip 镜像源</h3>
-            <pre class="copyable">
+    <div class="command-detail">
+        <div class="command-detail-left">
+            <section>
+                <h3>配置 Pip 镜像源</h3>
+                <pre class="copyable">
 pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple</pre>
-            <h3>配置 Conda 镜像源</h3>
-            <p>Windows用户需要手动执行</p>
-            <pre class="copyable">conda config --set show_channel_urls yes</pre>
-            <pre class="copyable">
+                <h3>配置 Conda 镜像源</h3>
+                <p>Windows用户需要手动执行</p>
+                <pre class="copyable">conda config --set show_channel_urls yes</pre>
+                <pre class="copyable">
 channels:
   - defaults
 show_channel_urls: true
@@ -67,20 +69,23 @@ custom_channels:
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/</pre>
-            <p>pytorch + cuda12.1</p>
-            <pre class="copyable">
+                <p>pytorch + cuda12.1</p>
+                <pre class="copyable">
 conda install pytorch=2.2.1 pytorch-cuda=12.1 torchvision torchaudio -c nvidia</pre>
-            <p>Tensorflow + cuda12.1</p>
-            <pre class="copyable">
+                <p>Tensorflow + cuda12.1</p>
+                <pre class="copyable">
 pip install tensorflow[and-cuda]
 # Verify the installation:
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"</pre>
 
-            <p>Tensorflow + cpu</p>
-            <pre class="copyable">
+                <p>Tensorflow + cpu</p>
+                <pre class="copyable">
 # Anything above 2.10 is not supported on the GPU on Windows Native
 python -m pip install "tensorflow<2.11" </pre>
-        </section>
+            </section>
+        </div>
+        <div class="command-detail-right">
+        </div>
     </div>
 
 

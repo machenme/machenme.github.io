@@ -44,22 +44,33 @@ pre {
 }
 
 
-/* 使用 Flexbox 布局将 .conda-config-wrapper 分为左右两部分 */
-.conda-config-wrapper {
+/* 使用 Flexbox 布局将 .command-detail 分为左右两部分 */
+.command-detail {
     display: flex;
-    flex-direction: row; /* 横向排列 */
+    flex-direction: row;
+    /* 横向排列 */
+    width: 100%;
+    /* 设置宽度为100%，即占据整个浏览器窗口的宽度 */
+    box-sizing: border-box;
+    /* 确保宽度包含padding和border */
+    /* 横向排列 */
 }
 
 /* 左边部分占据固定的宽度 */
-.conda-config {
-    flex: 0 0 50%; /* 占据 50% 的宽度 */
+.command-detail-left {
+    flex: 0 0 50%;
+    /* 占据 50% 的宽度 */
 }
 
 /* 右边部分占据 50% 的宽度 */
-.conda-config1 {
-    flex: 0 0 50%; /* 占据 50% 的宽度 */
+.command-detail-right {
+    flex: 0 0 50%;
+    /* 占据 50% 的宽度 */
 }
 
+h2 {
+    text-align: center;
+}
 
 
 
@@ -80,7 +91,7 @@ section {
     border: 1px solid #ddd;
 }
 
-section h2 {
+section {
     margin-top: 0;
 }
 
