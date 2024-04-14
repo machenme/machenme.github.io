@@ -71,9 +71,12 @@ custom_channels:
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/</pre>
+                <p>pytorch + cpu</p>
+                <pre class="copyable">
+pip3 install torch torchvision torchaudio</pre>
                 <p>pytorch + cuda12.1</p>
                 <pre class="copyable">
-conda install pytorch=2.2.1 pytorch-cuda=12.1 torchvision torchaudio -c nvidia</pre>
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia</pre>
                 <p>Tensorflow + cuda12.1</p>
                 <pre class="copyable">
 pip install tensorflow[and-cuda]
@@ -82,7 +85,10 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU')
 
                 <p>Tensorflow + cpu</p>
                 <pre class="copyable">
-# Anything above 2.10 is not supported on the GPU on Windows Native
+python -m pip install "tensorflow<2.16" </pre>
+                <p>Tensorflow + cuda11.2 for Windows only</p>
+                <pre class="copyable">
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y
 python -m pip install "tensorflow<2.11" </pre>
             </section>
         </div>
